@@ -1,0 +1,145 @@
+* {
+    margin: 0;
+    padding: 0;
+    color: black;
+
+}
+/* first time using this */
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 120px;
+}
+
+body {
+
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+header {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    justify-content: center;
+    width: 100vw;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: rgb(255, 255, 255);
+}
+
+h1 {
+    font-size: 1.2rem;
+    text-align: center;
+    padding: 1rem;
+}
+
+.nav-bar{
+    
+    border-bottom: solid 1px black;
+    padding: 1rem 4rem 2rem;
+
+}
+
+ul {
+    width:100%;
+    display: flex;
+    justify-content:space-between;
+    text-decoration: none;
+
+}
+
+li{
+    list-style: none;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+a:active {
+    text-decoration: none;
+}
+
+/* sections */
+
+section h2 {
+    text-align: center;
+    padding: 1rem;
+    position: sticky;
+    top:0;
+    z-index: 900;
+    background-color: rgb(255, 255, 255);
+    box-shadow: rgb(255, 255, 255) 0px 54px 55px, rgb(255, 255, 255) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+} 
+
+
+p {
+    padding: 1.5rem 4rem;
+    line-height: 1.6;
+    text-align: justify;
+   
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 100vw;
+    grid-template-rows: 25rem 25rem 25rem 30rem;
+    overflow: scroll;
+}
+
+section {
+    position:relative;
+    overflow: scroll;
+    padding-bottom: 2rem;
+    border-bottom: solid 1px black;
+   
+}
+#section1 {
+    grid-row: 1/2;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+}
+
+#section2 {
+    grid-row: 2/3;
+ }
+
+.section2-lists {
+    display: flex;
+    justify-content:space-around;
+}
+
+.s2olist{
+    /* display:flex;
+    flex-direction: column; */
+}
+
+.s2ulist{
+    /* display: flex;
+    flex-direction: column; */
+}
+
+#section3 {
+    grid-row: 3/4;
+}
+#section4 {
+    grid-row: 4/5;
+}
+
+
+.example-image{
+    max-width: 50%;
+    margin: auto;
+   
+}
