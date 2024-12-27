@@ -3,23 +3,33 @@
 const body = document.querySelector("body");
 const form = document.querySelector("form");
 
+
 //elemet creation
 const formContainer = document.createElement("div");
+
+//colors
+const backgroundPrimary = "#7e3c48";
+const backgroundSecondary = "#eed7e6"
+const textColor = "#7e3c48";
+const inputBackground = "white";
+
+
+
 
 function bodyStyle() {
   body.style.display = "flex";
   body.style.justifyContent = "center";
-  body.style.height = "90vh";
+//   body.style.height = "fit-content";
   body.style.fontFamily = "Fira Code, Arial, Helvetica";
-  body.style.backgroundColor = "#7e3c48";
-  body.style.color = "#7e3c48";
+  body.style.backgroundColor = backgroundPrimary;
+  body.style.color = textColor;
 }
 
 function formContainerStyle() {
   formContainer.setAttribute("class", "form-container");
   formContainer.style.alignContent = "center";
-  formContainer.style.backgroundColor = "whitesmoke";
-  formContainer.style.padding = "1.7rem";
+  formContainer.style.backgroundColor =backgroundSecondary;
+  formContainer.style.padding = "2rem";
 
   formContainer.appendChild(form);
   body.appendChild(formContainer);
@@ -48,6 +58,8 @@ function labelsAndOptionsTextChange() {
   const option2 = option[1];
   const option3 = option[2];
 
+  optionsLabel.style.border = "0.5px solid #7e3c48";
+
   nameLabel.textContent = "What's your name?";
   emailLabel.textContent = "What's your email?";
   phoneLabel.textContent = "What's your phone number?";
@@ -64,8 +76,19 @@ function labelsAndOptionsTextChange() {
   option3radioLabel.textContent = "My favorite color is red.";
 }
 
+function inputAndTextareaStyle(){
+    const input = document.querySelectorAll("#name, #email, #phone, #message, #radio1, #radio")
+  
+    input.forEach(input =>{
+        input.style.backgroundColor= inputBackground;
+        input.style.border= "0.5px solid #7e3c48";
+        input.style.float="right";
+    })
+}
+
 createFormTitle();
 formContainerStyle();
 bodyStyle();
 
 labelsAndOptionsTextChange();
+inputAndTextareaStyle();
