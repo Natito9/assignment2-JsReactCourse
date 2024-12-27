@@ -15,7 +15,7 @@ const dropdownMenu = document.getElementById("options")
 const formContainer = document.createElement("div");
 
 
-function bodyStyle() {
+function styleBody() {
   body.style.display = "flex";
   body.style.justifyContent = "center";
   body.style.height = "100vh"
@@ -25,7 +25,7 @@ function bodyStyle() {
 }
 
 
-function formContainerStyle() {
+function styleFormContainer() {
   formContainer.setAttribute("class", "form-container");
   formContainer.style.alignSelf = "center";
   formContainer.style.backgroundColor =backgroundSecondary;
@@ -35,7 +35,7 @@ function formContainerStyle() {
 }
 
 
-function formStyle(){
+function styleForm(){
     form.style.padding ="2rem"
     form.style.height = "fit-content"
     form.style.textAlign = "auto";
@@ -75,14 +75,14 @@ function labelsAndOptionsTextChange() {
     
 }
 
-function labelStyle(){
+function styleLabel(){
 
     label.forEach(label=> {
         label.style.padding= "0.3rem"
     })
 }
 
-function inputAndTextareaStyle(){
+function styleInputAndTextarea(){
     const input = document.querySelectorAll("#name, #email, #phone, #message")
   
     input.forEach(input =>{
@@ -97,7 +97,7 @@ function inputAndTextareaStyle(){
     
 }
 
-function dropdownMenuStyle() {
+function styleDropdownMenu() {
     dropdownMenu.style.backgroundColor= inputBackground;
     dropdownMenu.style.border= "0.5px solid #7e3c48";
     dropdownMenu.style.float="right";
@@ -107,7 +107,7 @@ function dropdownMenuStyle() {
 
 }
 
-function buttonSubmitStyle(){
+function styleButtonSubmit(){
     const submitButton = document.querySelector('input[value="Submit"]');
 
     submitButton.style.position = "relative";
@@ -126,14 +126,14 @@ function buttonSubmitStyle(){
 function runAllFunctions(){
 
 createFormTitle();
-formContainerStyle();
-bodyStyle();
-formStyle()
+styleFormContainer();
+styleBody();
+styleForm()
 labelsAndOptionsTextChange();
-inputAndTextareaStyle();
-labelStyle();
-dropdownMenuStyle()
-buttonSubmitStyle();
+styleInputAndTextarea();
+styleLabel();
+styleDropdownMenu()
+styleButtonSubmit();
 
 }
 
