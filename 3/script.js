@@ -7,6 +7,9 @@ const inputBackground = "white";
 //element selection
 const body = document.querySelector("body");
 const form = document.querySelector("form");
+const label = document.querySelectorAll("label");
+const options = document.querySelectorAll("option");
+const dropdownMenu = document.getElementById("options")
 
 //elemet creation
 const formContainer = document.createElement("div");
@@ -21,6 +24,7 @@ function bodyStyle() {
   body.style.color = textColor;
 }
 
+
 function formContainerStyle() {
   formContainer.setAttribute("class", "form-container");
   formContainer.style.alignSelf = "center";
@@ -30,44 +34,45 @@ function formContainerStyle() {
   body.appendChild(formContainer);
 }
 
+
 function formStyle(){
     form.style.padding ="2rem"
     form.style.height = "fit-content"
     form.style.textAlign = "auto";
 }
-formStyle()
+
 
 function createFormTitle() {
-  const formTitle = document.createElement("h1");
-  formTitle.textContent = "Sign-up";
-  formTitle.style.textAlign="center"
-  formContainer.appendChild(formTitle);
-}
+    const formTitle = document.createElement("h1");
 
-const label = document.querySelectorAll("label");
+    formTitle.textContent = "Sign-up";
+    formTitle.style.textAlign="center"
+    formContainer.appendChild(formTitle);
+}
 
 
 function labelsAndOptionsTextChange() {
 
-    const labelTexts = ["What's your name?","What's your email?","What's your phone number?","Please give 5 original reasons of why you want to Sign up.","Do you have a pet?"]
+    const labelTexts = ["- What's your name?",
+        "- What's your email?",
+        "- What's your phone number?",
+        "- Give 5 original reasons why you want to Sign up.",
+        "- Do you have a pet?",
+        "- What phrase identifies you best?",
+        "- I love tacos.",
+        "- I love sports.",
+        "- My favorite color is red."
+        ]
         label.forEach((label, index)=>{
         if (labelTexts[index]) label.textContent=labelTexts[index];
         });
 
-    const options = document.querySelectorAll("option");
+
     const optionTexts = ["Yes, a cat", "Yes, a dog", "No"];
         options.forEach((option, index) => {
         if (optionTexts[index]) option.textContent = optionTexts[index];
         });
     
-    //i feel if i put this in the array labelTexts it would be harer to read (?)
-    const option1radioLabel = label[6];
-    const option2radioLabel = label[7];
-    const option3radioLabel = label[8]; 
-
-    option1radioLabel.textContent = "I love tacos.";
-    option2radioLabel.textContent = "I love sports.";
-    option3radioLabel.textContent = "My favorite color is red.";
 }
 
 function labelStyle(){
@@ -75,7 +80,6 @@ function labelStyle(){
     label.forEach(label=> {
         label.style.padding= "0.3rem"
     })
-    // nameLabel.style.padding = "1rem";
 }
 
 function inputAndTextareaStyle(){
@@ -85,13 +89,22 @@ function inputAndTextareaStyle(){
         input.style.backgroundColor= inputBackground;
         input.style.border= "0.5px solid #7e3c48";
         input.style.float="right";
-        input.style.marginRight="1rem";
 
     })
 
     const textArea = document.getElementById("message")
     textArea.style.margin = "1rem auto"
     
+}
+
+function dropdownMenuStyle() {
+    dropdownMenu.style.backgroundColor= inputBackground;
+    dropdownMenu.style.border= "0.5px solid #7e3c48";
+    dropdownMenu.style.float="right";
+    dropdownMenu.style.padding = "0.3rem 2rem"
+    dropdownMenu.style.color = textColor;
+  
+
 }
 
 function buttonSubmitStyle(){
@@ -109,13 +122,20 @@ function buttonSubmitStyle(){
 
 
 }
-buttonSubmitStyle();
+
+function runAllFunctions(){
 
 createFormTitle();
 formContainerStyle();
 bodyStyle();
-
+formStyle()
 labelsAndOptionsTextChange();
 inputAndTextareaStyle();
 labelStyle();
+dropdownMenuStyle()
+buttonSubmitStyle();
+
+}
+
+runAllFunctions();
 
