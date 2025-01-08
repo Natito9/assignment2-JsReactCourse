@@ -25,7 +25,6 @@ button2.onclick = function(event) {
 };
 
 //buttons 3, 4 y 5
-
 const buttons = document.querySelectorAll(('#button3, #button4, #button5'));
 function alertButtons (){
 
