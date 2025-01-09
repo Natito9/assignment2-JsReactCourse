@@ -3,7 +3,7 @@ const apiUrl = `https://opentdb.com/api.php`;
 
 // Function to make a GET request using
 // TODO: 1. find the error and fix it, 2. finish the function
-function fetchData(url=cat) {
+function fetchData(url) {
   fetch(url)
     .then((response) => {
       if (!response.ok) {
