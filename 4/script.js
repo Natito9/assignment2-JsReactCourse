@@ -30,7 +30,7 @@ function alertButtons (){
 
   buttons.forEach(button=>{
     button.addEventListener("click", (event) => {
-      
+
       alert(`${button.id} clicked!`);
       event.stopPropagation()
       ;
