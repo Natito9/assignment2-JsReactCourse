@@ -15,43 +15,39 @@ const dropdownMenu = document.getElementById("options")
 const formContainer = document.createElement("div");
 
 
-function styleBody() {
   body.style.display = "flex";
   body.style.justifyContent = "center";
   body.style.height = "100vh"
   body.style.fontFamily = "Arial, Helvetica";
   body.style.backgroundColor = backgroundPrimary;
   body.style.color = textColor;
-}
 
 
-function styleFormContainer() {
   formContainer.setAttribute("class", "form-container");
   formContainer.style.alignSelf = "center";
   formContainer.style.backgroundColor =backgroundSecondary;
 
   formContainer.appendChild(form);
   body.appendChild(formContainer);
-}
 
 
-function styleForm(){
+
     form.style.padding ="2rem"
     form.style.height = "fit-content"
     form.style.textAlign = "auto";
-}
 
 
-function createFormTitle() {
+
+
     const formTitle = document.createElement("h1");
 
     formTitle.textContent = "Sign-up";
     formTitle.style.textAlign="center"
     formContainer.appendChild(formTitle);
-}
 
 
-function labelsAndOptionsTextChange() {
+
+
 
     const labelTexts = ["- What's your name?",
         "- What's your email?",
@@ -73,16 +69,14 @@ function labelsAndOptionsTextChange() {
         if (optionTexts[index]) option.textContent = optionTexts[index];
         });
     
-}
 
-function styleLabel(){
+
 
     label.forEach(label=> {
         label.style.padding= "0.3rem"
     })
-}
 
-function styleInputAndTextarea(){
+
     const input = document.querySelectorAll("#name, #email, #phone, #message")
   
     input.forEach(input =>{
@@ -95,9 +89,7 @@ function styleInputAndTextarea(){
     const textArea = document.getElementById("message")
     textArea.style.margin = "1rem auto"
     
-}
 
-function styleDropdownMenu() {
     dropdownMenu.style.backgroundColor= inputBackground;
     dropdownMenu.style.border= "0.5px solid #7e3c48";
     dropdownMenu.style.float="right";
@@ -105,9 +97,6 @@ function styleDropdownMenu() {
     dropdownMenu.style.color = textColor;
   
 
-}
-
-function styleButtonSubmit(){
     const submitButton = document.querySelector('input[value="Submit"]');
 
     submitButton.style.position = "relative";
@@ -121,21 +110,4 @@ function styleButtonSubmit(){
     submitButton.style.padding = "0.5rem 1rem";
 
 
-}
-
-function runAllFunctions(){
-
-createFormTitle();
-styleFormContainer();
-styleBody();
-styleForm()
-labelsAndOptionsTextChange();
-styleInputAndTextarea();
-styleLabel();
-styleDropdownMenu()
-styleButtonSubmit();
-
-}
-
-runAllFunctions();
 
