@@ -13,10 +13,12 @@ function App() {
   };
 
   
+
+  
   return (
     <div>
       <header>
-        <h1>Hi</h1>
+        <h1>Person Details</h1>
       </header>
       <ChildComponent person={person} />
       {/* TODO create a child component in proper jsx, the component takes the person object as props and render the data */}
