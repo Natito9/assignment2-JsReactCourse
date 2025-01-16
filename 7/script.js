@@ -97,4 +97,4 @@ function isPalindrome(word) {
    isPalindrome("12321") 
    isPalindrome("racecar") 
    isPalindrome("coding") 
-//end
+//done :)
