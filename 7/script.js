@@ -98,3 +98,4 @@ function isPalindrome(word) {
    isPalindrome("racecar") 
    isPalindrome("coding") 
 
+//done
