@@ -20,6 +20,7 @@ function App() {
       </header>
       <ChildComponent person={person} />
       {/* TODO create a child component in proper jsx, the component takes the person object as props and render the data */}
+      <PropsComponent person={person} />
     </div>
   );
 }
