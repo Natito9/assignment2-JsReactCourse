@@ -18,6 +18,13 @@ console.log(reverseString("hello"))
 console.log(reverseString("world"))
 console.log(reverseString("12345"))
 
+function reversesolution(string ){
+  let reversed= "";
+  for (let char of str){
+    reverser = char+reversed;
+  }
+  return reversed
+}
 
 /**
  * TODO write a JavaScript function that takes a number and returns it in the reverse order.
