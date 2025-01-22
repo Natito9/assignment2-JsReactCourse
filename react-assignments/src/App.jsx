@@ -1,3 +1,4 @@
+import EffectsComponent from "./Components/Effect/EffectsComponent";
 import "./App.css";
 import ChildComponent from "./ChildComponent";
 
@@ -20,7 +21,9 @@ function App() {
       </header>
       <ChildComponent person={person} />
       {/* TODO create a child component in proper jsx, the component takes the person object as props and render the data */}
-      <PropsComponent person={person} />
+      {/* <PropsComponent person={person} /> */}
+      {/* <MyStateComponent /> */}
+      <EffectsComponent />
     </div>
   );
 }
