@@ -1,6 +1,12 @@
 import EffectsComponent from "./Components/Effect/EffectsComponent";
 import "./App.css";
-import ChildComponent from "./ChildComponent";
+import MyStateComponent from "./Components/MyStateComponent/MyStateComponent";
+import PropsComponent from "./Components/MyStateComponent/PropsComponent";
+//for the routes
+import { BrowserRouter as Router, Routes, Route } from "react-router";
+import NavBar from "./Components/NavBar/NavBAr";
+import HomePage from "./Components/HomePage/HomePage";  
+import Error404 from "./Components/Error404/Error404";  
 
 function App() {
   const person = {
@@ -13,18 +19,20 @@ function App() {
     },
   };
 
-  
+  //  TODO ad routes to the components we've created so far
   return (
-    <div>
-      <header>
-        <h1>Hi</h1>
-      </header>
-      <ChildComponent person={person} />
-      {/* TODO create a child component in proper jsx, the component takes the person object as props and render the data */}
-      {/* <PropsComponent person={person} /> */}
-      {/* <MyStateComponent /> */}
-      <EffectsComponent />
-    </div>
+    <>
+      <h1>Im a title</h1>
+      <NavBar/>
+      <Routes>
+        <Route index element ={<HomePage/>}/>
+        <Route path="/effects" element={<EffectsComponent/>}/>
+        <Route path="/state" element={<MyStateComponent/>}/>
+        <Route path="/person" element={<PropsComponent person={person} />}/>
+        <Route path="*" element={<Error404 />} />
+        </Routes>
+    
+    </>
   );
 }
 

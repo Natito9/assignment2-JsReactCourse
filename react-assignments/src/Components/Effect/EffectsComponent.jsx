@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import "./EffectsComponent.css";
 import MyStateComponent from "../MyStateComponent/MyStateComponent";
+import { useNavigate } from "react-router";
 // TODO: Create a Component, that does an API call to get characters from Game of Thrones and display them in a list. https://thronesapi.com/api/v2/Characters
 // - use the Fetch API to get the data
 // - use the useEffect hook to fetch the data when the component mounts
@@ -10,7 +11,7 @@ function EffectsComponent() {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [showMystate, setShowMystate] = useState(false);
-
+  const navigate = useNavigate();
   useEffect(() => {
     fetch("https://thronesapi.com/api/v2/Characters")
       .then((response) => response.json())
@@ -28,7 +29,7 @@ function EffectsComponent() {
 
   return (
     <div>
-      <button onClick={() => setShowMystate(!showMystate)}>Toggle View</button>
+      {/* <button onClick={() => {setShowMystate(!showMystate); navigate("/state")}}>Toggle View</button> */}
       <h1>Effects Component</h1>
       {showMystate ? (
         <MyStateComponent />
