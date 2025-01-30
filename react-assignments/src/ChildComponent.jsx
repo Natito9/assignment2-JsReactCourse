@@ -1,17 +1,18 @@
 import React from "react"
 
 export function ChildComponent({person}){
-    const hobbiesArray = person.info.hobbies;
-    console.log(hobbiesArray)
+    // deconstructing object
+    const {name, info:{age, city, job, hobbies}} = person;
 
     return(
         <div>
-        <h1>Name: {person.name}</h1>
-        <h2>Age: {person.info.age}</h2>
-        <h2>city: {person.info.city}</h2>
-    
-        <h2>{hobbiesArray.map((hobbies)=>(
-        hobbies)  )}</h2>
+        <h2>Name: {name}</h2>
+        <h2>Age: {age}</h2>
+        <h2>city: {city}</h2>
+        <h2>job: {job}</h2>
+        {/* deconstructing array */}
+        <h2>hobbies: {hobbies.map((hobbies)=>(
+        hobbies))}</h2>
      
         </div>
     )
